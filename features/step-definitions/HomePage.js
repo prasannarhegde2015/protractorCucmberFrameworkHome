@@ -20,7 +20,8 @@ var second = String(todayTime.getSeconds());
 return day + "_" + month + "_" + year +"_"+ hour + "_" + minute + "_" +second;
 }
 
-defineSupportCode(({When, Then}) => {
+defineSupportCode(({When, Then,setDefaultTimeout}) => {
+  setDefaultTimeout(60 * 1000);
   
    When('I am on the homepage', function() {
     console.log("Executing step 1---------------------------");
